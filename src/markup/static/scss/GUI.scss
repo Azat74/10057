@@ -1,2 +1,48 @@
 // GUI stylies of the project
 // For example, styles of the links, buttons and so on.
+.main-header__standart {
+    background: $gray;
+}
+
+.menu-button {
+    background: black;
+    width: 50px;
+    height: 50px;
+    .menu-button__sandwich {
+        width: 30px;
+        margin-left: 10px;
+        margin-top: auto;
+        margin-bottom: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 19px;
+        background-color: black;
+        div {
+            height: 2px;
+            background: white;
+        }
+    }
+}
+
+.container {
+    /*mobile */
+    background: #a8a8a8;
+    flex-direction: column;
+    width: 80%;
+    height: 150px;
+    font-size: 20px;
+    /*tablet and desktop */
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        height: 41px;
+        margin-left: auto;
+        margin-right: auto;
+        background: $gray;
+        width: 91%;
+        font-weight: 700;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

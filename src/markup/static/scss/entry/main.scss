@@ -1,16 +1,32 @@
 @import '../normalize.scss';
+html,
+body {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    max-width: 99.7%;
+}
+
+div {
+    display: flex;
+}
+
 
 /* Libraries, which is used in current project. */
+
 @import 'partials/_libraries.scss';
 
 /* Libraries, which is used in current project. */
+
 @import 'built-in-partials/_service.scss';
 
 /* Plugins, which is used in current project. */
+
 @import 'partials/_plugins.scss';
 
 /* Components, which is used in current project. */
+
 @import 'partials/_components.scss';
 
 /* Additional style files. */
+
 @import '../etc/etc.scss';

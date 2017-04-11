@@ -180,3 +180,29 @@
 // =============================================================================
 
 // Добавлять свои миксины здесь
+
+@mixin margin_none {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -moz-margin-before: 0;
+  -moz-margin-after: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+  -ms-margin-before: 0;
+  -ms-margin-after: 0;
+  -ms-margin-start: 0;
+  -ms-margin-end: 0;
+  margin-before: 0;
+  margin-after: 0;
+  margin-start: 0;
+  margin-end: 0;
+}
+
+
+// =============================================================================
+// Цвета
+// =============================================================================
+$gray:#f3f3f3;
+$blue:#0c4da2;
