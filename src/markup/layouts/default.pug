@@ -1,7 +1,9 @@
 include ../../node_modules/bemto.pug/bemto
 
 include ../components/header/header
+include ../components/main/main
 include ../components/footer/footer
+
 
 -const pageSettings = {}
 -pageSettings.title = '';
@@ -19,6 +21,7 @@ html(lang='ru')
         +header()
 
         block content
+        +main()
 
         +footer()
 

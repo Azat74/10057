@@ -1,0 +1,27 @@
+mixin main(data)
+	+b.MAIN.main()&attributes(attributes)
+		block
+		div.nav-menu
+			div.container
+				div.logo
+					img(src="%=static=%img/content/transaero.png" width="267" height="60" alt="logo")
+				div.nav-tabs
+					div.nav-tabs__point.nav-tabs__point_active.nav-tabs__point1
+						p.nav-tabs__point__header Возможности
+						p.nav-tabs__point__content Lorem ipsum
+					div.nav-tabs__point.nav-tabs__point2
+						p.nav-tabs__point__header Информация
+						p.nav-tabs__point__content Second Lorem ipsum second
+					div.nav-tabs__point.nav-menu__point3
+						p.nav-tabs__point__header Привилегии
+						p.nav-tabs__point__content Third Lorem ipsum Third
+					div.breadcrumbs
+						div.breadcrumbs__breadcrumb.breadcrumbs__breadcrumb_active.breadcrumb1
+						div.breadcrumbs__breadcrumb.breadcrumb2
+						div.breadcrumbs__breadcrumb.breadcrumb3
+				div.search-form-container
+					form(action="#" method="POST")
+						//- img(src="%=static=%img/content/find.svg" width="17" height="17" alt="find")
+						div.find-svg(style="background:url('%=static=%img/content/icons.svg'); background-position:0 -20px")
+						input(type="text" placeholder="поиск по сайту")
+						input(type="submit" hidden)

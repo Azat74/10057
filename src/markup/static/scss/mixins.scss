@@ -1,5 +1,4 @@
 // Mixins.
-
 @mixin list-reset($margin: true, $padding: true) {
     @if $margin {
         margin: 0;
@@ -7,9 +6,7 @@
     @if $padding {
         padding: 0;
     }
-
     text-indent: 0;
-
     list-style: none;
     list-style-position: outside;
     list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7); //Для ослика
@@ -26,7 +23,6 @@
 @mixin align-justify {
     text-align: justify;
     text-justify: newspaper;
-
     &::after {
         content: '';
         display: inline-block;
@@ -37,21 +33,19 @@
 @mixin hide-text {
     text-indent: 100%;
     white-space: nowrap;
-
     overflow: hidden;
 }
 
 @mixin hidden {
     position: absolute;
-    clip: rect(0 0 0 0); /* for Internet Explorer */
+    clip: rect(0 0 0 0);
+    /* for Internet Explorer */
     clip: rect(0, 0, 0, 0);
-
     height: 1px;
     width: 1px;
     padding: 0;
     margin: -1px;
     border: 0;
-
     overflow: hidden;
 }
 
@@ -63,12 +57,13 @@
     @if ($vert) {
         top: 50%;
     }
-
-    @if ($horiz == false) {
+    @if ($horiz==false) {
         transform: translateY(-50%);
-    } @else if ($vert == false) {
+    }
+    @else if ($vert==false) {
         transform: translateX(-50%);
-    } @else {
+    }
+    @else {
         transform: translate(-50%, -50%);
     }
 }
@@ -89,21 +84,17 @@
 // =============================================================================
 // String Replace (вспомогательный миксин для font-face)
 // =============================================================================
-
 @function str-replace($string, $search, $replace: "") {
     $index: str-index($string, $search);
-
     @if $index {
-        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+        @return str-slice($string, 1, $index - 1)+$replace+str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
     }
-
     @return $string;
 }
 
 // =============================================================================
 // Font Face
 // =============================================================================
-
 // $name - название для font-family
 // $path - путь к шрифту без формата
 // $weight - font-weight
@@ -111,23 +102,13 @@
 // $exts - форматы шрифта, которые используются
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
     $src: null;
-
-    $extmods: (
-        eot: "?",
-        svg: "#" + str-replace($name, " ", "_")
-    );
-
-    $formats: (
-        otf: "opentype",
-        ttf: "truetype"
-    );
-
+    $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_"));
+    $formats: ( otf: "opentype", ttf: "truetype");
     @each $ext in $exts {
         $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
         $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
         $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
     }
-
     @font-face {
         font-family: quote($name);
         font-style: $style;
@@ -139,23 +120,26 @@
 // =============================================================================
 // Медиа запросы
 // =============================================================================
-
 // меньше указанной величины (по умолчанию ширина)
-@mixin below($width, $orientation: 'width') {
+@mixin below($width,
+$orientation: 'width') {
     @media screen and (max-#{$orientation}: $width) {
         @content;
     }
 }
 
 // больше указанной величины (по умолчанию ширина)
-@mixin above($width, $orientation: 'width') {
+@mixin above($width,
+$orientation: 'width') {
     @media screen and (min-#{$orientation}: $width) {
         @content;
     }
 }
 
 // между первой и второй величиной (по умолчанию ширина)
-@mixin between($minWidth, $maxWidth, $orientation: 'width') {
+@mixin between($minWidth,
+$maxWidth,
+$orientation: 'width') {
     @media screen and (min-#{$orientation}: $minWidth) and (max-#{$orientation}: $maxWidth) {
         @content;
     }
@@ -164,13 +148,13 @@
 // =============================================================================
 // Функции пересчета значений
 // =============================================================================
-
 @function rem($num) {
     $strip-unit: $num / ($num * 0 + 1);
     @return $strip-unit / 16 * 1rem;
 }
 
-@function em($num, $root: 16) {
+@function em($num,
+$root: 16) {
     $strip-unit: $num / ($num * 0 + 1);
     @return $strip-unit / $root * 1em;
 }
@@ -178,31 +162,33 @@
 // =============================================================================
 // Миксины специфичные для проекта
 // =============================================================================
-
 // Добавлять свои миксины здесь
-
 @mixin margin_none {
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  -moz-margin-before: 0;
-  -moz-margin-after: 0;
-  -moz-margin-start: 0;
-  -moz-margin-end: 0;
-  -ms-margin-before: 0;
-  -ms-margin-after: 0;
-  -ms-margin-start: 0;
-  -ms-margin-end: 0;
-  margin-before: 0;
-  margin-after: 0;
-  margin-start: 0;
-  margin-end: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -moz-margin-before: 0;
+    -moz-margin-after: 0;
+    -moz-margin-start: 0;
+    -moz-margin-end: 0;
+    -ms-margin-before: 0;
+    -ms-margin-after: 0;
+    -ms-margin-start: 0;
+    -ms-margin-end: 0;
+    margin-before: 0;
+    margin-after: 0;
+    margin-start: 0;
+    margin-end: 0;
 }
-
 
 // =============================================================================
 // Цвета
 // =============================================================================
 $gray:#f3f3f3;
 $blue:#0c4da2;
+// =============================================================================
+// Размеры
+// =============================================================================
+$tablet:768px;
+$desktop:1200px;
