@@ -1,27 +1,73 @@
+include ../menuBtn/menuBtn
+include ../container/container
+include ../country/country
+include ../registerSection/registerSection
+include ../popupClose/popupClose
+
+
 mixin header(data)
-	+b.HEADER.header()&attributes(attributes)
+	+b.HEADER.header_standart()&attributes(attributes)
 		block
-		div.main-header.main-header_standart
-			div.menu-button
-				div.menu-button__sandwich
-					- for (var li = 0; li < 3; li++)
-						div
-			div.container
-				div.country-container.country-container_original
-					div.country-container__country-selector
-						a(href='#') USA site
-					div.country-container__country-selector
-						a(href='#') Deutsch site
-					div.country-container__language-container
-						div.country-container__language-container__current-language Россия:&nbsp;
-						a(href='#') Switch to english
-				div.online-table-and-register-container.online-table-and-register-container_original
-					div.online-table-and-register-container__online-table
-						//- img(src="%=static=%img/content/clock.svg" width="20" height="20" alt="clock")
-						div.clock-svg(style="background:url('%=static=%img/content/icons.svg')")
-						a(href="#") Онлайн-табло
-					div.online-table-and-register-container__register
-						a(href="#") Вход и регистрация
-				div.popup-close
-					div
-					div
+		//- div.main-header.main-header_standart
+		//- 	div.menu-button
+		//- 		div.menu-button__sandwich
+		//- 			- for (var li = 0; li < 3; li++)
+		//- 				div
+		//- 	div.container
+		//- 		div.country-container.country-container_original
+		//- 			div.country-container__country-selector
+		//- 				a(href='#') USA site
+		//- 			div.country-container__country-selector
+		//- 				a(href='#') Deutsch site
+		//- 			div.country-container__language-container
+		//- 				div.country-container__language-container__current-language Россия:&nbsp;
+		//- 				a(href='#') Switch to english
+		//- 		div.online-table-and-register-container.online-table-and-register-container_original
+		//- 			div.online-table-and-register-container__online-table
+		//- 				//- img(src="%=static=%img/content/clock.svg" width="20" height="20" alt="clock")
+		//- 				div.clock-svg(style="background:url('%=static=%img/content/icons.svg')")
+		//- 				a(href="#") Онлайн-табло
+		//- 			div.online-table-and-register-container__register
+		//- 				a(href="#") Вход и регистрация
+		//- 		div.popup-close
+		//- 			div
+		//- 			div				
+		+menuBtn
+		+container
+			+country._original
+			+registerSection._original
+			+popupClose
+
+
+				
+		
+
+
+
+
+
+
+
+
+
+
+
+		//- +b.foo.bar__
+		//- 	+e.baz
+
+		//- +b.block_foo bar
+
+		//- +b.block_foo._bar._baz
+		//- 	+e.element_type_lol._mode_moddy Blah
+
+		//- +b.foo.bar.baz
+		//- 	+e.kart(src="foo.png")
+		//- +b.UL.list
+		//- 	+b.list-item
+		//- 		+e.link(href=jv0)
+		//- 			+e.text foo
+		//- 	+b.list-item
+		//- 		+e.link(href="bar")
+		//- 			+e.text bar
+		//- +b({ metadata: { content_type: 'block' } }).A.foo
+		//- 	+e.bar baz

@@ -1,17 +1,15 @@
 /* ***** HEADER START ***** */
 
 .header {
-    .main-header {
-        margin-top: 60px;
+    margin-top: 60px;
 
-        @include above($tablet) {
-            margin-top: 0;
-        }
+    @include above($tablet) {
+        margin-top: 0;
     }
-    .main-header_standart {
+    &_standart {
         background: $gray;
     }
-    .menu-button {
+    .menuBtn {
         margin-left: auto;
 
         @include above($tablet) {
@@ -21,7 +19,6 @@
     .container {
         /*mobile */
         position: absolute;
-        // background: #a8a8a8;
         z-index: 2;
         right: 0;
 
@@ -31,6 +28,8 @@
         height: 150px;
 
         font-size: 20px;
+
+        background: #a8a8a8;
         /*tablet and desktop */
 
         @include above($tablet) {
@@ -45,29 +44,29 @@
 
             background: none;
         }
-        .popup-close {
+        .popupClose {
             left: -50px;
         }
     }
     .container_show {
         display: flex;
     }
-    .country-container {
+    .country {
         @include above($tablet) {
             margin-left: 67px;
         }
-        &__country-selector {
+        &_original {
+            a {
+                color: $blue;
+            }
+        }
+        &__selector {
             @include above($tablet) {
                 margin-right: 29px;
             }
         }
     }
-    .country-container_original {
-        a {
-            color: $blue;
-        }
-    }
-    .online-table-and-register-container {
+    .registerSection {
         flex-direction: column;
 
         @include above($tablet) {
@@ -82,14 +81,19 @@
                 //     top: -3px;
                 //     left: -25px;
                 // }
-                .clock-svg {
-                    position: absolute;
-                    top: -3px;
-                    left: -25px;
+            }
+        }
+        &__clock-svg {
+            position: absolute;
+            top: -3px;
+            left: -25px;
 
-                    width: 20px;
-                    height: 20px;
-                }
+            display: none;
+            width: 20px;
+            height: 20px;
+
+            @include above($tablet) {
+                display: flex;
             }
         }
         &__register {
@@ -97,10 +101,10 @@
                 margin-left: 15px;
             }
         }
-    }
-    .online-table-and-register-container_original {
-        a {
-            color: $blue;
+        &_original {
+            a {
+                color: $blue;
+            }
         }
     }
 }

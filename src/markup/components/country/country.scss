@@ -1,0 +1,7 @@
+.country {
+    flex-direction: column;
+
+    @include above($tablet) {
+        flex-direction: row;
+    }
+}

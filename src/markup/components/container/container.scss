@@ -1,0 +1,16 @@
+.container {
+    /*mobile */
+    /*tablet and desktop */
+
+    @include above($tablet) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 91%;
+        margin-right: auto;
+        margin-left: auto;
+
+        background: $gray;
+    }
+}

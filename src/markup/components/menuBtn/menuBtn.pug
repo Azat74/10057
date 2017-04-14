@@ -1,0 +1,6 @@
+mixin menuBtn(data)
+	+b.menuBtn()&attributes(attributes)
+		block
+		+e.sandwich
+			- for (var i=0; i < 3; i++)
+				+e.line

@@ -1,0 +1,10 @@
+include ../link/link
+
+mixin registerSection(data)
+	+b.registerSection()&attributes(attributes)
+		block
+		+e.online-table
+			+e.clock-svg(style="background:url('%=static=%img/content/icons.svg')")
+			+link(jv0) Онлайн-табло
+		+e.register
+			+link(jv0) Вход и регистрация

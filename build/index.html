@@ -23,73 +23,88 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="main-header main-header_standart">
-            <div class="menu-button">
-                <div class="menu-button__sandwich">
-                    <div></div>
-                    <div></div>
-                    <div></div>
+    <header class="header header_standart">
+        <div class="menuBtn">
+            <div class="menuBtn__sandwich">
+                <div class="menuBtn__line">
+                </div>
+                <div class="menuBtn__line">
+                </div>
+                <div class="menuBtn__line">
                 </div>
             </div>
-            <div class="container">
-                <div class="country-container country-container_original">
-                    <div class="country-container__country-selector">
-                        <a href="#">USA site</a>
-                    </div>
-                    <div class="country-container__country-selector">
-                        <a href="#">Deutsch site</a>
-                    </div>
-                    <div class="country-container__language-container">
-                        <div class="country-container__language-container__current-language">Россия:&nbsp;</div>
-                        <a href="#">Switch to english</a>
-                    </div>
+        </div>
+        <div class="container">
+            <div class="country country_original">
+                <div class="country__selector">
+                    <a class="link" href="javascript:void(0)">USA site</a>
                 </div>
-                <div class="online-table-and-register-container online-table-and-register-container_original">
-                    <div class="online-table-and-register-container__online-table">
-                        <div class="clock-svg" style="background:url('static/img/content/icons.svg');"></div>
-                        <a href="#">Онлайн-табло</a>
-                    </div>
-                    <div class="online-table-and-register-container__register">
-                        <a href="#">Вход и регистрация</a>
-                    </div>
+                <div class="country__selector">
+                    <a class="link" href="javascript:void(0)">Deutsch site</a>
                 </div>
-                <div class="popup-close">
-                    <div></div>
-                    <div></div>
+                <div class="language">
+                    <div class="language__current">Россия:&nbsp;
+                    </div>
+                    <a class="link" href="javascript:void(0)">Switch to english</a>
+                </div>
+            </div>
+            <div class="registerSection registerSection_original">
+                <div class="registerSection__online-table">
+                    <div class="registerSection__clock-svg" style="background:url('static/img/content/icons.svg');">
+                    </div>
+                    <a class="link" href="javascript:void(0)">Онлайн-табло</a>
+                </div>
+                <div class="registerSection__register">
+                    <a class="link" href="javascript:void(0)">Вход и регистрация</a>
+                </div>
+            </div>
+            <div class="popupClose">
+                <div class="popupClose__cross">
+                </div>
+                <div class="popupClose__cross">
                 </div>
             </div>
         </div>
     </header>
     <!-- Контент здесь-->
     <main class="main" role="main">
-        <div class="nav-menu">
+        <div class="navMenu">
             <div class="container">
                 <div class="logo">
                     <img src="static/img/content/transaero.png" width="267" height="60" alt="logo" />
                 </div>
-                <div class="nav-tabs">
-                    <div class="nav-tabs__point nav-tabs__point_active nav-tabs__point1">
-                        <p class="nav-tabs__point__header">Возможности</p>
-                        <p class="nav-tabs__point__content">Lorem ipsum</p>
-                    </div>
-                    <div class="nav-tabs__point nav-tabs__point2">
-                        <p class="nav-tabs__point__header">Информация</p>
-                        <p class="nav-tabs__point__content">Second Lorem ipsum second</p>
-                    </div>
-                    <div class="nav-tabs__point nav-menu__point3">
-                        <p class="nav-tabs__point__header">Привилегии</p>
-                        <p class="nav-tabs__point__content">Third Lorem ipsum Third</p>
-                    </div>
+                <div class="navTabs">
                     <div class="breadcrumbs">
-                        <div class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb_active breadcrumb1"></div>
-                        <div class="breadcrumbs__breadcrumb breadcrumb2"></div>
-                        <div class="breadcrumbs__breadcrumb breadcrumb3"></div>
+                        <div class="breadcrumbs__breadcrumb breadcrumbs__breadcrumb_active breadcrumb1">
+                        </div>
+                        <div class="breadcrumbs__breadcrumb breadcrumb2">
+                        </div>
+                        <div class="breadcrumbs__breadcrumb breadcrumb3">
+                        </div>
+                    </div>
+                    <div class="navTabs__point navTabs__point_active navTabs__point_point1">
+                        <div class="navTabs__header">Возможности
+                        </div>
+                        <div class="navTabs__content">Lorem ipsum
+                        </div>
+                    </div>
+                    <div class="navTabs__point navTabs__point_point2">
+                        <div class="navTabs__header">Информация
+                        </div>
+                        <div class="navTabs__content">Second Lorem ipsum second
+                        </div>
+                    </div>
+                    <div class="navTabs__point navTabs__point_point3">
+                        <div class="navTabs__header">Привилегии
+                        </div>
+                        <div class="navTabs__content">Third Lorem ipsum Third
+                        </div>
                     </div>
                 </div>
-                <div class="search-form-container">
-                    <form action="#" method="POST">
-                        <div class="find-svg" style="background:url('static/img/content/icons.svg'); background-position:0 -20px;"></div>
+                <div class="searchForm">
+                    <form action="javascript:void(0)" method="POST">
+                        <div class="searchForm__findSvg" style="background:url('static/img/content/icons.svg'); background-position:0 -20px;">
+                        </div>
                         <input type="text" placeholder="поиск по сайту" />
                         <input type="submit" hidden="hidden" />
                     </form>

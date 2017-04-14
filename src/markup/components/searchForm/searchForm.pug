@@ -1,0 +1,7 @@
+mixin searchForm(data)
+	+b.searchForm()&attributes(attributes)
+		block
+		form(action=jv0 method="POST")
+			+e.findSvg(style="background:url('%=static=%img/content/icons.svg'); background-position:0 -20px")
+			input(type="text" placeholder="поиск по сайту")
+			input(type="submit" hidden)

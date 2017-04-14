@@ -1,0 +1,11 @@
+include ../link/link
+include ../language/language
+
+mixin country(data)
+	+b.country()&attributes(attributes)
+		block
+		+e.selector
+			+link(jv0) USA site
+		+e.selector
+			+link(jv0) Deutsch site
+		+language

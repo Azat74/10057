@@ -1,0 +1,5 @@
+.navMenu {
+    @include above($desktop) {
+        border-bottom: 1px solid $gray;
+    }
+}

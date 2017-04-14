@@ -1,0 +1,12 @@
+.breadcrumbs {
+    &__breadcrumb {
+        width: 10px;
+        height: 10px;
+
+        border: 1px solid black;
+        transform: rotate(45deg);
+    }
+    &__breadcrumb_active {
+        background: black;
+    }
+}

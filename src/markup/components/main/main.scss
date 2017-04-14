@@ -1,9 +1,5 @@
         .main {
-            .nav-menu {
-                @include above($desktop) {
-                    border-bottom: 1px solid $gray;
-                }
-            }
+            .nav-menu {}
             .container {
                 flex-direction: column-reverse;
                 width: 100%;
@@ -38,32 +34,36 @@
                     margin-left: auto;
                 }
             }
-            .nav-tabs {
+            .navTabs {
                 &__point {
                     display: none;
 
                     @include above($desktop) {
                         display: flex;
                     }
-                    &__header {
-                        margin: 0 auto;
-                        margin-top: 10px;
-                        margin-bottom: 10px;
-                    }
-                    &__content {
-                        margin: 0 10%;
+                }
+                &__point_active {
+                    display: flex;
+                }
+                &__header {
+                    margin: 0 auto;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                &__content {
+                    margin: 0 10%;
 
-                        color: black;
+                    color: black;
 
-                        @include above($desktop) {
-                            display: none;
-                        }
+                    @include above($desktop) {
+                        display: none;
                     }
                 }
             }
             .breadcrumbs {
                 position: absolute;
-                bottom: -300px;
+                z-index: 2;
+                bottom: 10px;
 
                 width: 100%;
 
@@ -78,7 +78,7 @@
                     margin-left: 10px;
                 }
             }
-            .search-form-container {
+            .searchForm {
                 width: 100%;
 
                 @include above($desktop) {
@@ -91,14 +91,6 @@
                         display: flex;
                         width: 250px;
                         margin-left: 50px;
-                    }
-                    .find-svg {
-                        position: absolute;
-                        top: 6px;
-                        right: 5px;
-
-                        width: 20px;
-                        height: 20px;
                     }
                 }
             }
